@@ -1,0 +1,29 @@
+#include<stdio.h>
+int lcm(int,int);
+int main
+{
+ int a,b,LCM;
+ printf("Enter two numbers to find LCM:");
+ scanf("%d%d",&num1,&num2);
+ LCM=lcm(a,b);
+ printf("\n LCM of %d and %d is: %d",a,b,lcm);
+ return 0;
+}
+int lcm(int a,int b)
+{
+ static int temp=1;
+ if(temp%a==0 && temp%b==0)
+ {
+  return temp;
+ else
+ {
+  temp++;
+  lcm(a,b);
+  return temp;
+ }
+}
+  
+
+
+
+ 
